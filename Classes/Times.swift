@@ -1,8 +1,8 @@
 import Foundation
 
-class Times: NSObject {
+public class Times: NSObject {
 
-  static let shared = Times()
+  public static let shared = Times()
 
   var timesDictionary: [String: Int] {
 
@@ -20,47 +20,51 @@ class Times: NSObject {
 
   var temporaryDictionary: [String: Int]  = [String: Int]()
 
-  func once(forKey key: String, action: () -> Void) {
+  public func once(forKey key: String, action: () -> Void) {
     if !timesDictionary.contains(key: key) {
       timesDictionary[key] = 1
       action()
     }
   }
 
-  func twice(forKey key: String, action: () -> Void) {
+  public func twice(forKey key: String, action: () -> Void) {
     times(2, forKey: key, action: action)
   }
 
-  func times(_ times: Int, forKey key: String, action: () -> Void) {
-    guard let times = timesDictionary[key] else { return }
+  public func times(_ times: Int, forKey key: String, action: () -> Void) {
     if !timesDictionary.contains(key: key) {
       timesDictionary[key] = 1
       action()
-    } else if times < 2 {
-      timesDictionary[key] = timesDictionary[key]! + 1
-      action()
+    } else {
+      let currentTimes = timesDictionary[key]!
+      if currentTimes < 2 {
+        timesDictionary[key] = timesDictionary[key]! + 1
+        action()
+      }
     }
   }
 
-  func onceForSession(forKey key: String, action: () -> Void) {
+  public func onceForSession(forKey key: String, action: () -> Void) {
     if !temporaryDictionary.contains(key: key) {
       temporaryDictionary[key] = 1
       action()
     }
   }
 
-  func twiceForSession(forKey key: String, action: () -> Void) {
-    times(2, forKey: key, action: action)
+  public func twiceForSession(forKey key: String, action: () -> Void) {
+    timesForSession(2, forKey: key, action: action)
   }
 
-  func timesForSession(_ times: Int, forKey key: String, action: () -> Void) {
-    guard let times = temporaryDictionary[key] else { return }
+  public func timesForSession(_ times: Int, forKey key: String, action: () -> Void) {
     if !temporaryDictionary.contains(key: key) {
       temporaryDictionary[key] = 1
       action()
-    } else if times < 2 {
-      temporaryDictionary[key] = temporaryDictionary[key]! + 1
-      action()
+    } else {
+      let currentTimes = temporaryDictionary[key]!
+      if currentTimes < 2 {
+        temporaryDictionary[key] = temporaryDictionary[key]! + 1
+        action()
+      }
     }
   }
 
