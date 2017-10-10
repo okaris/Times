@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name = "Times"
-  s.version = "0.0.1"
+  s.version = "1.0.0"
   s.summary = "Control how many times a codeblock gets executed."
   s.description = <<-DESC
   You can easily run a codeblock once (or as many times you want) without having to track the status yourself.
