@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kop-hF-hOT">
+                                <rect key="frame" x="71" y="267" width="232" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FR8-zH-RHB"/>
+                                    <constraint firstAttribute="width" constant="232" id="LMe-60-Xjm"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert Once For This Session"/>
+                                <connections>
+                                    <action selector="showOnce" destination="BYZ-38-t0r" eventType="touchUpInside" id="qmh-3k-STz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDX-g7-2UV">
+                                <rect key="frame" x="69" y="318" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="Bf7-zq-Sxn"/>
+                                    <constraint firstAttribute="height" constant="30" id="wqn-Ka-ZYa"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert Twice For This Session"/>
+                                <connections>
+                                    <action selector="showTwice" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEs-eg-rLe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCu-D5-jVt">
+                                <rect key="frame" x="43" y="368" width="289" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VUJ-kp-cTZ"/>
+                                    <constraint firstAttribute="width" constant="289" id="iKw-C7-kRs"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert Once Until The App Re-Installs"/>
+                                <connections>
+                                    <action selector="showOnceForever" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHQ-3z-z7M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DCu-D5-jVt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Zr-uW-nC7"/>
+                            <constraint firstItem="Kop-hF-hOT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I1s-Y4-lS7"/>
+                            <constraint firstItem="FDX-g7-2UV" firstAttribute="top" secondItem="Kop-hF-hOT" secondAttribute="bottom" constant="21" id="LIx-zR-dZb"/>
+                            <constraint firstItem="DCu-D5-jVt" firstAttribute="top" secondItem="FDX-g7-2UV" secondAttribute="bottom" constant="20" id="Ony-02-IPe"/>
+                            <constraint firstItem="FDX-g7-2UV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XHT-8N-Agc"/>
+                            <constraint firstItem="FDX-g7-2UV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="beL-Rb-Gm4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
