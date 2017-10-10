@@ -1,3 +1,5 @@
+![This does not make much sense...](https://i.imgur.com/ZR8LfCD.png "This does not make much sense...")
+
 # Times
 
 You can easily run a codeblock once (or as many times you want) without having to track the status yourself. Times tracks the number of times the block gets executed and decides wheter to run or not on your preference.
