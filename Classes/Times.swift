@@ -68,6 +68,14 @@ public class Times: NSObject {
     }
   }
 
+  public func timesSoFar(forKey key: String) -> Int {
+    return timesDictionary[key] ?? 0
+  }
+
+  public func timesSoFarForSession(forKey key: String) -> Int {
+    return temporaryDictionary[key] ?? 0
+  }
+
 }
 
 extension Dictionary where Key == String {
@@ -77,3 +85,4 @@ extension Dictionary where Key == String {
   }
 
 }
+
