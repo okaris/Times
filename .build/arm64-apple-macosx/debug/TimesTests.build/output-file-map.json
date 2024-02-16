@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/okaris/Desktop/Times/.build/arm64-apple-macosx/debug/TimesTests.build/master.swiftdeps"
+  },
+  "/Users/okaris/Desktop/Times/Tests/TimesTests/TimesTests.swift": {
+    "dependencies": "/Users/okaris/Desktop/Times/.build/arm64-apple-macosx/debug/TimesTests.build/TimesTests.d",
+    "object": "/Users/okaris/Desktop/Times/.build/arm64-apple-macosx/debug/TimesTests.build/TimesTests.swift.o",
+    "swiftmodule": "/Users/okaris/Desktop/Times/.build/arm64-apple-macosx/debug/TimesTests.build/TimesTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/okaris/Desktop/Times/.build/arm64-apple-macosx/debug/TimesTests.build/TimesTests.swiftdeps"
+  }
+}

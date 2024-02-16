@@ -1,59 +1,44 @@
-![This does not make much sense...](https://i.imgur.com/ZR8LfCD.png "This does not make much sense...")
-
 # Times
 
-You can easily run a codeblock once (or as many times you want) without having to track the status yourself. Times tracks the number of times the block gets executed and decides wheter to run or not on your preference.
+Easily execute a code block once or a specified number of times without manually tracking its execution. Times handles the execution count and conditionally runs the block based on your criteria, with support for both persistent and session-based tracking.
 
 ## Installation
 
-Times is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager
 
-```ruby
-pod "Times"
-```
+You can add Times to your project via Swift Package Manager by adding the following to your `Package.swift` file in the `dependencies` array:
+
+```swift
+.package(url: "https://github.com/okaris/Times.git", .upToNextMajor(from: "2.0.0"))
 
 ## Usage
 
-```
+The Times package provides a fluent API to schedule the execution of code blocks based on the number of times they have been run. Here are some examples:
 
-Times.shared.once(forKey: "tutorial") {
-  // This gets executed once unless the user deletes and reinstalls
-}
-
-Times.shared.twice(forKey: "tutorial") {
-  // This gets executed two times unless the user deletes and reinstalls
-}
-
-Times.shared.times(8, forKey: "tutorial") {
-  // This gets executed eight times unless the user deletes and reinstalls
-}
-
-Times.shared.onceForSession(forKey: "tutorial") {
-  // This gets executed once. Count is zeroed when app restarts.
-}
-
-Times.shared.twiceForSession(forKey: "tutorial") {
-  // This gets executed two times. Count is zeroed when app restarts.
-}
-
-Times.shared.timesForSession(8, forKey: "tutorial") {
-  // This gets executed eight times. Count is zeroed when app restarts.
-}
 
 ```
+// Run a block once (persistent across app launches)
+Times.once.perform {
+  // This block gets executed once unless the user deletes and reinstalls the app.
+}
 
-## Author
-| [<img src="https://avatars1.githubusercontent.com/u/1448702?v=4" width="100px;"/>](http://okaris.com)   | [Omer Karisman](http://okaris.com)<br/><br/><sub>Lead UI/UX @ [MojiLaLa](http://mojilala.com)</sub><br/> [![Twitter][1.1]][1] [![Dribble][2.1]][2] [![Github][3.1]][3]|
-| - | :- |
+// Run a block once per session
+Times.onceForSession.perform {
+  // This block gets executed once per app session.
+}
 
-[1.1]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
-[2.1]: http://i.imgur.com/Vvy3Kru.png (dribbble icon without padding)
-[3.1]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
+// Run a block a specific number of times
+Times.t(3).perform {
+  // This block gets executed up to three times, persistent across app launches.
+}
 
-[1]: http://www.twitter.com/okarisman
-[2]: http://dribbble.com/okaris
-[3]: http://www.github.com/okaris
+// Run a block a specific number of times per session
+Times.t(2, scope: .session).perform {
+  // This block gets executed up to two times per session.
+}
+
+
+```
 
 ## License
 

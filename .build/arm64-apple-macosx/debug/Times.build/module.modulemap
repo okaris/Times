@@ -1,0 +1,4 @@
+module Times {
+    header "/Users/okaris/Desktop/Times/.build/arm64-apple-macosx/debug/Times.build/Times-Swift.h"
+    requires objc
+}
