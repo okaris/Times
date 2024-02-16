@@ -12,6 +12,7 @@ You can add Times to your project via Swift Package Manager by adding the follow
 
 ```swift
 .package(url: "https://github.com/okaris/Times.git", .upToNextMajor(from: "2.0.0"))
+```
 
 ## Usage
 
