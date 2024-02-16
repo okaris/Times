@@ -2,6 +2,8 @@
 
 Easily execute a code block once or a specified number of times without manually tracking its execution. Times handles the execution count and conditionally runs the block based on your criteria, with support for both persistent and session-based tracking.
 
+<img width="312" alt="image" src="https://github.com/okaris/Times/assets/1448702/cc1daa08-7557-415b-aa20-234d2ee3cbe9">
+
 ## Installation
 
 ### Swift Package Manager
