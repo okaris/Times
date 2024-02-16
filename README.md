@@ -19,7 +19,7 @@ You can add Times to your project via Swift Package Manager by adding the follow
 The Times package provides a fluent API to schedule the execution of code blocks based on the number of times they have been run. Here are some examples:
 
 
-```
+```swift
 // Run a block once (persistent across app launches)
 Times.once.perform {
   // This block gets executed once unless the user deletes and reinstalls the app.
